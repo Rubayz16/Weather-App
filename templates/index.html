@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Weather App</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <h1 style="text-align: center;">Welcome to Weather App</h1>
+        <h3 style="text-align: center;">Get weather data of any city around the world!</h3>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center" style="margin: 10px;">
+            <a href="/weather" class="btn btn-outline-secondary btn-lg px-4 me-sm-3 fw-bold">Find Weather</a>
+        </div>
+    </div>
+{% endblock %}

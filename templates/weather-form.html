@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Weather Form</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .stylize {
+            border: 1px solid gray;
+            border-radius: 10px;
+            padding: 50px;
+        }
+        .stylize:hover {            
+            box-shadow: 1px 1px 5px lightgray;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="stylize container mt-5">
+        <h4>Weather Data Input</h4>
+        <form action="/weather" method="post">
+            <label for="city" class="form-label">City: </label>
+            <input placeholder="Enter City Name e.g Los Angeles" type="text" id="city" name="city" class="form-control">
+            <input type="submit" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold" value="Submit">
+        </form>
+    </div>
+{% endblock %}
